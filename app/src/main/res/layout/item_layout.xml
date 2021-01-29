@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="?colorSurface">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/card_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/steak_marinade_12"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.App.SelectedCornerRadius"
+        android:background="@color/green_200" />
+
+    <LinearLayout
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_tv"
+            style="@style/FoodName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flavorful Steak" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_tv_small"
+            style="@style/FoodDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_tv"
+            android:text="Pan-sear steak cook to perfection. It's flavorful with soft texture." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right">
+
+        <TextView
+            style="@style/AddBtn"
+            android:text="+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100.00"
+             style="@style/PriceText" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
